@@ -592,6 +592,19 @@ export function Chat() {
   };
 
   useEffect(() => {
+    axios({
+      method: "get",
+      url: "https://test.dianshangsoul.com/user/checklogin",
+      withCredentials: true,
+    }).then((res) => {
+      if (res.data.code != 200) {
+        alert(res.data.msg);
+        navigate(Path.Login);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     chatStore.updateCurrentSession((session) => {
       const stopTiming = Date.now() - REQUEST_TIMEOUT_MS;
       session.messages.forEach((m) => {
