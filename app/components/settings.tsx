@@ -289,19 +289,19 @@ export function Settings() {
       }
     };
 
-    axios({
-      method: "get",
-      url: "https://test.dianshangsoul.com/user/checklogin",
-      withCredentials: true,
-    }).then((res) => {
-      console.log(res);
-      if (res.data.code == 200) {
-        getExpire();
-      } else {
-        alert(res.data.msg);
-        navigate(Path.Login);
-      }
-    });
+    // axios({
+    //   method: "get",
+    //   url: "https://test.dianshangsoul.com/user/checklogin",
+    //   withCredentials: true,
+    // }).then((res) => {
+    //   console.log(res);
+    //   if (res.data.code == 200) {
+    //     getExpire();
+    //   } else {
+    //     alert(res.data.msg);
+    //     navigate(Path.Login);
+    //   }
+    // });
 
     document.addEventListener("keydown", keydownEvent);
     return () => {
@@ -388,7 +388,7 @@ export function Settings() {
         method: "post",
         url: "https://test.dianshangsoul.com/redemption/getRedem",
         data: {
-          code,
+          code:event.target.value,
           username: JSON.parse(localStorage.getItem("userInfo")!).username,
         },
         withCredentials: true,
