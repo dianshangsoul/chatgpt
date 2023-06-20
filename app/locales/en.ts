@@ -108,7 +108,7 @@ const en: LocaleType = {
       ConfirmClearAll: "Are you sure you want to reset all data?",
     },
     Lang: {
-      Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
+      Name: "Language",
       All: "All Languages",
     },
     Avatar: "Avatar",
@@ -141,8 +141,7 @@ const en: LocaleType = {
         SubTitle: "Input / to trigger auto-completion",
       },
       List: "Prompt List",
-      ListCount: (builtin: number, custom: number) =>
-        `${builtin} built-in, ${custom} user-defined`,
+      ListCount: (builtin: number, custom: number) => `${builtin} built-in, ${custom} user-defined`,
       Edit: "Edit",
       Modal: {
         Title: "Prompt List",
@@ -159,8 +158,7 @@ const en: LocaleType = {
     },
     CompressThreshold: {
       Title: "History Compression Threshold",
-      SubTitle:
-        "Will compress if uncompressed messages length exceeds the value",
+      SubTitle: "Will compress if uncompressed messages length exceeds the value",
     },
     Token: {
       Title: "API Key",
@@ -196,9 +194,10 @@ const en: LocaleType = {
     },
     PresencePenalty: {
       Title: "Presence Penalty",
-      SubTitle:
-        "A larger value increases the likelihood to talk about new topics",
+      SubTitle: "A larger value increases the likelihood to talk about new topics",
     },
+    CurrentUser: "",
+    RemainingDuration: ""
   },
   Store: {
     DefaultTopic: "New Conversation",
